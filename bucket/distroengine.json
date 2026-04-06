@@ -1,0 +1,24 @@
+{
+  "version": "0.1.3",
+  "description": "Standalone DistroEngine CLI for publishing, GTM, and attribution workflows",
+  "homepage": "https://github.com/guardianai-network/distroengine-cli-releases",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/guardianai-network/distroengine-cli-releases/releases/download/distroengine-v0.1.3/distroengine-windows-x86_64.exe",
+      "hash": "a4d6481c47fd51a63866da79b3f3cd31d04cb6039abd72f58d9c12a293ff2b04"
+    }
+  },
+  "bin": "distroengine-windows-x86_64.exe",
+  "post_install": "Rename-Item \"$dir\\distroengine-windows-x86_64.exe\" \"distroengine.exe\"",
+  "checkver": {
+    "github": "https://github.com/guardianai-network/distroengine-cli-releases"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/guardianai-network/distroengine-cli-releases/releases/download/distroengine-v$version/distroengine-windows-x86_64.exe"
+      }
+    }
+  }
+}
